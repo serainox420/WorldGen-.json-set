@@ -1,0 +1,82 @@
+{
+  "generate_features": true,
+  "bonus_chest": false,
+  "seed": 666,
+  "dimensions": {
+    "minecraft:the_end": {
+      "type": "minecraft:overworld",
+      "generator": {
+        "type": "minecraft:noise",
+        "seed": 1255114098,
+        "settings": "minecraft:overworld",
+        "biome_source": {
+          "type": "minecraft:fixed",
+          "biome": "minecraft:plains"
+        }
+      }
+    },
+    "minecraft:the_nether": {
+      "type": "minecraft:overworld",
+      "generator": {
+        "type": "minecraft:flat",
+        "settings": {
+          "biome": "minecraft:ice_spikes",
+          "lakes": true,
+          "features": true,
+          "layers": [],
+          "structures": {
+            "structures": {
+              "minecraft:nether_fossil": {
+                "spacing": 5,
+                "separation": 2,
+                "salt": 2
+              },
+              "minecraft:igloo": {
+                "spacing": 10,
+                "separation": 5,
+                "salt": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    "minecraft:overworld": {
+      "type": "minecraft:overworld_caves",
+      "generator": {
+        "type": "minecraft:noise",
+        "seed": -420,
+        "settings": "minecraft:end",
+        "biome_source": {
+          "type": "minecraft:multi_noise",
+          "biomes": [
+            {
+              "biome": "minecraft:ice_spikes",
+              "parameters": {
+                "temperature": -2,
+                "humidity": -2,
+                "continentalness": 1,
+                "erosion": 2,
+                "weirdness": 2,
+                "depth": 2,
+                "offset": 1
+              }
+            },
+            {
+              "biome": "minecraft:soul_sand_valley",
+              "parameters": {
+                "temperature": 2,
+                "humidity": 2,
+                "continentalness": 2,
+                "erosion": 2,
+                "weirdness": 2,
+                "depth": 2,
+                "offset": 1
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
